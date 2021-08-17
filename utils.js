@@ -39,3 +39,8 @@ export function compareNumbers(userGuess, number) {
 export function randomNumber(min) {
     return Math.floor(Math.random() * 20);
 }
+
+export function setNumber(){
+    let correctAnswer = randomNumber(1);
+    console.log(correctAnswer);
+}
