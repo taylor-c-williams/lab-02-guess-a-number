@@ -30,10 +30,16 @@ guessButton.addEventListener('click', () => {
     if (guesses < 1) {
         guesses = 0;
     }
-   let guessTry = compareNumbers(Number(userInput.value), correctAnswer);
-    console.log(guessTry);
-    // if (guessTry === 0){
-    //     result.textContent = 'you won!';
-    // }
+    let guessTry = compareNumbers(Number(userInput.value), correctAnswer);
+    
+    if (guessTry === 0){
+        result.textContent = 'you won!';
+    }
+    if (guessTry === 1){
+        result.textContent = 'too high!';
+    }
+    if (guessTry === -1){
+        result.textContent = 'too low!';
+    }
     remainingGuesses.textContent = guesses;
 });
