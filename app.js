@@ -4,6 +4,8 @@ let userInput = document.getElementById('user-input');
 const guessButton = document.getElementById('guess-button');
 const result = document.getElementById('result');
 
+import { minMax } from './utils.js';
+import { tooHighLow } from './utils.js';
 
 let guesses = 4;
 
@@ -26,20 +28,18 @@ export function compareNumbers(guess, correctNumber) {
 }
 
 guessButton.addEventListener('click', () => {
-    guesses--;
-    if (guesses < 1) {
-        guesses = 0;
-    }
+    minMax();
+    guesses --;
+
     let guessTry = compareNumbers(Number(userInput.value), correctAnswer);
-    
-    if (guessTry === 0){
-        result.textContent = 'you won!';
-    }
-    if (guessTry === 1){
-        result.textContent = 'too high!';
-    }
-    if (guessTry === -1){
-        result.textContent = 'too low!';
-    }
+    tooHighLow(guessTry);
     remainingGuesses.textContent = guesses;
+
+    if (guesses === 0){
+        guessButton.disabled = true;
+    }
+
+    if (guessTry === 0){
+        guessButton.disabled = true;
+    }
 });
