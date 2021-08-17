@@ -1,17 +1,17 @@
 // import functions and grab DOM elements
 const remainingGuesses = document.getElementById('remaining-guesses');
-const guessInput = document.getElementById('guess-input');
+let userInput = document.getElementById('user-input');
 const guessButton = document.getElementById('guess-button');
 const result = document.getElementById('result');
-const winLose = document.getElementById('winlose');
+
 
 let guesses = 4;
 
-function randomNumber(max) {
+function randomNumber(min) {
     return Math.floor(Math.random() * 20);
 }
 
-let correctAnswer = randomNumber(20);
+let correctAnswer = randomNumber(1);
 
 console.log(correctAnswer);
 
@@ -25,13 +25,15 @@ export function compareNumbers(guess, correctNumber) {
     }
 }
 
-// guessButton.addEventListener('click', () => {
-//     guesses--;
-//     if (guesses < 1) {
-//         guesses = 0;
-//     }
-//     const guess = compareNumbers(guessInput, correctAnswer);
-//     console.log(guess);
-
-//     remainingGuesses.textContent = guesses;
-// });
+guessButton.addEventListener('click', () => {
+    guesses--;
+    if (guesses < 1) {
+        guesses = 0;
+    }
+   let guessTry = compareNumbers(Number(userInput.value), correctAnswer);
+    console.log(guessTry);
+    // if (guessTry === 0){
+    //     result.textContent = 'you won!';
+    // }
+    remainingGuesses.textContent = guesses;
+});
