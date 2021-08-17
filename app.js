@@ -15,21 +15,23 @@ let correctAnswer = randomNumber(20);
 
 console.log(correctAnswer);
 
-export function compareNumbers(guess, correctNumber){
-    if (guess < correctNumber){
+export function compareNumbers(guess, correctNumber) {
+    if (guess < correctNumber) {
         return -1;
-    } else if (guess > correctNumber){
+    } else if (guess > correctNumber) {
         return 1;
-    } else if (guess === correctNumber){
+    } else if (guess === correctNumber) {
         return 0;
     }
 }
 
-// guessButton.addEventListener('click', ()=> {
-//     guesses --;
-//     if (guesses < 1){
-//         guesses = 0 ;
+// guessButton.addEventListener('click', () => {
+//     guesses--;
+//     if (guesses < 1) {
+//         guesses = 0;
 //     }
-//         remainingGuesses.textContent = guesses;
-// });
+//     const guess = compareNumbers(guessInput, correctAnswer);
+//     console.log(guess);
 
+//     remainingGuesses.textContent = guesses;
+// });
