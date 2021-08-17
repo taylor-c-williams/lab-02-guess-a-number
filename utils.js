@@ -16,3 +16,26 @@ export function tooHighLow(aGuess){
         result.textContent = 'too low!';
     }
 }
+
+export function disableButton(guess, button, userGuess){
+    if (guess === 0){
+        button.disabled = true;
+    }
+    if (userGuess === 0){
+        button.disabled = true;
+    }
+}
+
+export function compareNumbers(userGuess, number) {
+    if (userGuess < number) {
+        return -1;
+    } else if (userGuess > number) {
+        return 1;
+    } else if (userGuess === number) {
+        return 0;
+    }
+}
+
+export function randomNumber(min) {
+    return Math.floor(Math.random() * 20);
+}
