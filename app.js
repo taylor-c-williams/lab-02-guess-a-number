@@ -15,17 +15,21 @@ let correctAnswer = randomNumber(20);
 
 console.log(correctAnswer);
 
-// set event listeners 
-guessButton.addEventListener('click', ()=>{
-    guesses --;
-    if (guesses < 1){
-        guesses = 0;
+export function compareNumbers(guess, correctNumber){
+    if (guess < correctNumber){
+        return -1;
+    } else if (guess > correctNumber){
+        return 1;
+    } else if (guess === correctNumber){
+        return 0;
     }
-    if (guessInput === correctAnswer) {
-        winLose.textContent = 'You Win!';
-    }  
-    remainingGuesses.textContent = guesses;
-});
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+}
+
+// guessButton.addEventListener('click', ()=> {
+//     guesses --;
+//     if (guesses < 1){
+//         guesses = 0 ;
+//     }
+//         remainingGuesses.textContent = guesses;
+// });
+
