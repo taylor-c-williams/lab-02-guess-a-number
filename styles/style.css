@@ -18,7 +18,7 @@ body {
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Space Mono', monospace;
     background-color: var(--color2);
 }
 
