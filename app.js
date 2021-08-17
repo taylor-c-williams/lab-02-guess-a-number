@@ -5,9 +5,15 @@ const guessButton = document.getElementById('guess-button');
 const result = document.getElementById('result');
 const winLose = document.getElementById('winlose');
 
-// initialize global state
 let guesses = 4;
 
+function randomNumber(max) {
+    return Math.floor(Math.random() * 20);
+}
+
+let correctAnswer = randomNumber(20);
+
+console.log(correctAnswer);
 
 // set event listeners 
 guessButton.addEventListener('click', ()=>{
@@ -15,6 +21,9 @@ guessButton.addEventListener('click', ()=>{
     if (guesses < 1){
         guesses = 0;
     }
+    if (guessInput === correctAnswer) {
+        winLose.textContent = 'You Win!';
+    }  
     remainingGuesses.textContent = guesses;
 });
   // get user input
