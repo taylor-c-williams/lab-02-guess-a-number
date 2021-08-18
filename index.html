@@ -16,20 +16,20 @@
 
 <body>
     <header>
-      <h1>Guess a Number!</h1>
+      <h1>Guess a Number!</h1></header>
+      <div class="sub-header">
       Any number between 1 and 20, you get 4 tries.
-    </header>
+      </div>
     <main>
-      <section> 
        <h2>You have</h2>
-       <div id="remaining-guesses">4</div>
+       <div id="remaining-guesses" class="remaining-guesses">4</div>
        <h2>guesses left!</h2>
-       </section>
+
 
        <section>
            <input id="user-input" type = "number" placeholder="Any integer between 1 and 20 ">
            <button id="guess-button">Guess!</button>
-           <div id = "result"></div>
+           <div id = "result" class="result"></div>
            <!-- <button id="reset-button">Play Again</button> -->
        </section>
 
