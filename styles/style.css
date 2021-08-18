@@ -1,45 +1,41 @@
-
 body {
-    font-family: 'Space Mono', monospace;
-
+	font-family: "Space Mono", monospace;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-
 
 header {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
-.sub-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom:40px;
+.sub-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 40px;
 }
 
-  input{
-      border:1px dotted black;
-      font-family: 'Space Mono', monospace;
-      width:250px;
-  }
-  button{
-      margin:5px;
-      border:1px dotted black;
-      font-family: 'Space Mono', monospace;
-  }
+input {
+	border: 1px dotted black;
+	font-family: "Space Mono", monospace;
+	width: 250px;
+}
+button {
+	margin: 5px;
+	border: 1px dotted black;
+	font-family: "Space Mono", monospace;
+}
 
-  .remaining-guesses{
-      font-size:4rem;
-  }
+.remaining-guesses {
+	font-size: 4rem;
+}
 
-  .result{
-      font-size:5rem;
-  }
+.result {
+	font-size: 5rem;
+}
