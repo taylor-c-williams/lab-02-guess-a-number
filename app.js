@@ -12,14 +12,14 @@ import {
     disableButton,
     randomNumber,
     setNumber,
+
 } from './utils.js';
 
 let guesses = 4;
-let correctAnswer = randomNumber(1);
+let correctAnswer = randomNumber(1, 20);
 console.log(correctAnswer);
 
 guessButton.addEventListener('click', () => {
-	// setNumber();
     minMax();
     guesses--;
     let guessTry = compareNumbers(Number(userInput.value), correctAnswer);
@@ -27,10 +27,3 @@ guessButton.addEventListener('click', () => {
     remainingGuesses.textContent = guesses;
     disableButton(guesses, guessButton, guessTry);
 });
-
-// resetButton.addEventListener('click',() => {
-//   setNumber();
-//   let guesses = 4;
-//   remainingGuesses.textContent = guesses;
-//   guessButton.disabled = false;
-// });
