@@ -3,7 +3,6 @@ const remainingGuesses = document.getElementById('remaining-guesses');
 let userInput = document.getElementById('user-input');
 const guessButton = document.getElementById('guess-button');
 const result = document.getElementById('result');
-const resetButton = document.getElementById('reset-button');
 
 import {
     compareNumbers,
@@ -11,8 +10,6 @@ import {
     tooHighLow,
     disableButton,
     randomNumber,
-    setNumber,
-
 } from './utils.js';
 
 let guesses = 4;
