@@ -20,6 +20,7 @@ export function tooHighLow(aGuess){
 export function disableButton(guess, button, userGuess){
     if (guess === 0){
         button.disabled = true;
+        result.textContent = ('You lose!');
     }
     if (userGuess === 0){
         button.disabled = true;
